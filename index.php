@@ -12,12 +12,26 @@
 </head>
 <body>
     <div id="app">
-        <ul  v-for='disk in discs'>
-            <li><img :src="disk.poster" alt=""></li>
-            <li>{{disk.title}}</li>
-            <li>{{disk.author}}</li>
-            <li>{{disk.year}}</li>
-        </ul>
+        <header>
+            <img class="ms_logo" src="./img/logo-small.svg" alt="">
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="ms_box p-5">
+                    <div class="p-4 ms_cards mx-3 mt-4" v-for='disk in discs'>
+                        <a href="">
+                            <img class="ms_img" :src="disk.poster" alt="">
+                            <div class="text-center mt-3">
+                                <h3>{{disk.title}}</h3>
+                                <h5 class="ms_t-g">{{disk.author}}</h5>
+                                <div class="ms_t-g">{{disk.year}}</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 <script src="./js/myscript.js"></script>
 </body>
